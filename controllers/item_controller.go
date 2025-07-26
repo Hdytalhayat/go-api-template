@@ -18,7 +18,7 @@ func GetItems(c *gin.Context) {
 
 	rows, err := config.DB.Query("SELECT id, title, author FROM items")
 	if err != nil {
-		utils.RespondError(c, http.StatusInternalServerError, "Gagal mengambil data buku")
+		utils.RespondError(c, http.StatusInternalServerError, "Gagal mengambil data item")
 		return
 	}
 	defer rows.Close()
@@ -26,7 +26,7 @@ func GetItems(c *gin.Context) {
 	for rows.Next() {
 		var b models.Item
 		if err := rows.Scan(&b.ID, &b.Title, &b.Author); err != nil {
-			utils.RespondError(c, http.StatusInternalServerError, "Gagal memindai data buku")
+			utils.RespondError(c, http.StatusInternalServerError, "Gagal memindai data item")
 			return
 		}
 		items = append(items, b)
@@ -47,7 +47,7 @@ func AddItem(c *gin.Context) {
 
 	result, err := config.DB.Exec("INSERT INTO items (title, author) VALUES (?, ?)", newItem.Title, newItem.Author)
 	if err != nil {
-		utils.RespondError(c, http.StatusInternalServerError, "Gagal menyimpan buku")
+		utils.RespondError(c, http.StatusInternalServerError, "Gagal menyimpan item")
 		return
 	}
 
