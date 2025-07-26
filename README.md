@@ -1,6 +1,6 @@
-# Templat REST API Go (Gin + GORM)
+# Template REST API Go (Gin)
 
-Ini adalah templat dasar yang kokoh untuk membangun REST API menggunakan Go dengan framework Gin.
+Ini adalah template dasar yang kokoh untuk membangun REST API menggunakan Go dengan framework Gin.
 
 ## Fitur
 
@@ -19,7 +19,7 @@ Ini adalah templat dasar yang kokoh untuk membangun REST API menggunakan Go deng
 
 1.  **Kloning Repositori**
     ```bash
-    git clone [URL_REPO_ANDA] nama-proyek-baru
+    git clone https://github.com/Hdytalhayat/go-api-template.git nama-proyek-baru
     cd nama-proyek-baru
     ```
 
