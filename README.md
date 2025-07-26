@@ -1,4 +1,4 @@
-# Templat REST API Go (Gin + GORM)
+# Template REST API Go (Gin)
 
 Ini adalah templat dasar yang kokoh untuk membangun REST API menggunakan Go dengan framework Gin.
 
